@@ -1,0 +1,151 @@
+*{margin: 0px;}
+body {
+    background-color: #e5e6e6;
+}
+
+#head {
+    display: block;
+    border: solid;
+    background-color: #84c044;
+    color: black;
+    text-align: center;
+    padding: 6px 0 9px 0;
+    font-size: 30px;
+    font-family: "BoomBoomRegular";
+    color: white;
+}
+
+#game-form {
+    margin: 0 auto;
+    height: 50px; 
+    border-bottom: solid;
+    border-color: white;
+    color: #42586a;
+    
+}
+
+#game-info {
+    font-size: 25px;
+    font-family: "BarkentinaRegular";
+    font-weight: bold;
+    float:left; 
+    display: block;
+    text-align: left;
+    height: 40px;
+    margin: 8px 15px 0px 15px;
+}
+
+#input-size-field {
+    margin: 10px 10px 10px 0px;
+    width: 250px;
+    height: 30px;
+    border-radius: 0px 3px 3px 0px;
+    outline: none;
+    border: none;
+    float: right;
+    font-family: "BarkentinaRegular";
+    font-size: 16px;
+    padding: 0 5px;
+}
+
+#button-size-field {
+    padding: 1px;
+    margin: 10px 0px 10px 0px;
+    cursor: hand;
+    outline: none;
+    border: none;
+    float: right;
+    height: 30px;
+    width: 45px;
+    font-family: "BarkentinaRegular";
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #669534;
+    border-radius: 3px 0px 0px 3px;
+}
+
+#game-original-form {
+    margin: 100px auto;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 5px;
+    font-family: "BoomBoomRegular";
+    color: #42586a;
+    font-size: 30px;
+    text-align: center; 
+    background-color: #84c044;
+}
+
+#game-field {
+    border: solid 3px;
+    padding: 5px;
+    width: 500px;
+    height: 500px;
+    background-color: #84c044;
+    border-radius: 5px;
+    border-spacing: 1px;
+}
+
+.cell-style {
+    border: solid 1px;
+    border-radius: 4px;
+    background-color: white;
+    cursor: hand;
+    background-image: url(null.png);
+}
+ .cell-style:hover{
+    background-color: #f4f2f2;
+    border-color: #0089ff;
+}
+
+.cell-style-x {
+    border: solid 1px;
+    border-radius: 4px;
+    background-color: white;
+    cursor: hand;
+    background-image: url(x.png);
+    background-size: 100%;
+}
+
+.cell-style-o {
+    border: solid 1px;
+    border-radius: 4px;
+    background-color: white;
+    cursor: hand;
+    background-image: url(o.png);
+    background-size: 100%;
+}
+
+@font-face {
+    font-family: "BoomBoomRegular";
+    src: url("fonts/BoomBoomRegular/BoomBoomRegular.eot");
+    src: url("fonts/BoomBoomRegular/BoomBoomRegular.eot?#iefix")format("embedded-opentype"),
+    url("fonts/BoomBoomRegular/BoomBoomRegular.woff") format("woff"),
+    url("fonts/BoomBoomRegular/BoomBoomRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "BarkentinaRegular";
+    src: url("fonts/BarkentinaRegular/BarkentinaRegular.eot");
+    src: url("fonts/BarkentinaRegular/BarkentinaRegular.eot?#iefix")format("embedded-opentype"),
+    url("fonts/BarkentinaRegular/BarkentinaRegular.woff") format("woff"),
+    url("fonts/BarkentinaRegular/BarkentinaRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+#small-cells {
+    position: relative;
+    left: -50px;
+    border: solid 3px;
+    padding: 2px;
+    margin: 0 auto;
+    width: 650px;
+    height: 500px;
+    background-color: white;
+    border-radius: 5px;
+    border-spacing: 1px;
+}

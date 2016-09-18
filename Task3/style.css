@@ -1,0 +1,106 @@
+
+body {
+    background: white;
+    font-family: 'Indie Flower', cursive;
+}
+
+form[name="calc"]{
+    margin: 400px auto;
+    height:80px;
+    width: 730px;
+    border: solid;
+    border-radius: 5px; 
+    background: #c3e1f7;
+    font-style: italic;
+}
+
+.inp {
+    width:60px;
+    height:60px;
+    margin: 10px;
+    border: none;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 3px;
+    float:left;
+    font-style: italic;
+}
+
+.selector {
+    width:60px;
+    height:60px;
+    font-size: 25px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    margin: 10px 0;
+    padding: 0px 0 0 15px;
+    float:left;
+    font-style: italic;
+}
+
+#button {
+    width:60px;
+    height:30px;
+    font-size: 25px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    background: white;
+    float:left;
+    margin: 25px 0;
+    background: #c3e1f7;
+    background-image:url(=.png);
+    background-repeat: no-repeat;
+    background-position:50%;
+    background-size: 30px;
+    outline: none;
+}
+
+textarea[name="res"]{
+    position: relative;
+    padding: 10px 0 0 0;
+    margin: 0 0 0 10px;
+    top: 17px;
+    width:400px;
+    height:50px;
+    font-size: 25px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    resize: none;
+    float:left;
+    font-style: italic;
+}
+
+#ahtung{
+    position: relative;
+    top:10px;
+    right: 5px;
+    width:26px;
+    height:26px;
+    float: right;
+}
+
+.pop-up:hover::after { 
+    content: attr(a);
+    content: attr(b);
+    content: attr(c);
+    content: attr(d);
+    position:absolute;
+    margin-left: 50px;
+    margin-top: -3px;
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 9999;
+}
+
+#help {
+    position: relative;
+    width:28px;
+    height:28px;
+    float: right;
+    top:20px;
+    right: 3px;
+}
