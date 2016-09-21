@@ -4,7 +4,7 @@ loadQuestions();
 
 function loadQuestions() {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'server/questions.json', true);
+    xhr.open('GET', "http://localhost:8080", true);
     xhr.send();
     xhr.onreadystatechange = function() {
         if (xhr.readyState != 4) return;
@@ -199,5 +199,18 @@ function beginCreating() {
             finalProfile[questions] = sectionFormData;
         }
         console.log(JSON.stringify(finalProfile));
+        load(finalProfile);
+    }
+    
+    function load(finalProfile) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', "http://localhost:8080/", true);
+    xhr.send(JSON.stringify(finalProfile));
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState != 4) return;
+        if (xhr.status != 200) {
+          alert(xhr.status + ':' + xhr.statusText);
+        }
+      }
     }
 }
