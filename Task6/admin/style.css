@@ -1,16 +1,13 @@
 *{margin: 0px;}
 #profile-form {
     margin: 100px auto;
-    min-width: 500px;
-    max-width: 1000px;
     background-color: white;
     border-radius: 5px;
     font-family: "BoomBoomRegular";
     color: #42586a;
-    font-size: 30px;
     text-align: center; 
-    background-color: #57a00d;
-    padding: 10px;
+    background-color: #40b4d0;
+    padding: 5px;
 }
 
 body {
@@ -18,61 +15,39 @@ body {
 }
 
 .section-style-form {
-    padding: 25px 10px 25px 10px;
+    padding: 5px 5px 5px 5px;
     margin: 5px;
+    height: 32px;
     border-radius: 5px;
-    background-color: #84c044;
+    background-color: #3b99cb;
 }
 
 .question-style {
+    font-size: 25px;
     position: relative;
-    float: left;
-    margin: -16px 10px 0px 10px;
+    margin: 0;
 }
 
 .text-style {
     position: relative;
-    float: right;
     height: 26px;
-    margin: -12px 5px 0px 5px;
-    border-radius: 5px;
-    border: none;
-}
-
-.checkbox-style {
-    position: relative;
-    float: right;
-    height: 26px;
-    margin: -12px 5px 0px 5px;
-    border-radius: 5px;
-    border: none;
-}
-
-.radio-style {
-    position: relative;
-    float: right;
-    height: 26px;
-    margin: -12px 5px 0px 5px;
+    margin: 0;
     border-radius: 5px;
     border: none;
 }
 
 .select-style {
     position: relative;
-    float: right;
     height: 26px;
-    margin: -12px 5px 0px 5px;
+    margin: 0px;
     border-radius: 5px;
     border: none;
 }
 
-
-
 .list-style {
     position: relative;
-    float: right;
     color: white;
-    margin: -20px 5px 0px 5px;
+    margin: 0px;
 }
 
 .send-button {
