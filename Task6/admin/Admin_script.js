@@ -1,22 +1,24 @@
+document.querySelector(".add-button").onclick = cloneForm;
+var sectionCount = 2;
+document.querySelector("#profile-form").onclick = deleteForm;
 
-function createSendButton () {
-        var sendElement = document.createElement("input");
-        sendElement.setAttribute('type', "button");
-        sendElement.setAttribute('value', "Send");
-        sendElement.setAttribute('class', "send-button");
-        document.querySelector("#profile-form").appendChild(sendElement);
-        document.querySelector(".send-button").onclick = chekFilled;
-    }
+function cloneForm() {
+    var firsForm = document.querySelectorAll(".section-style-form")[1];
+    firsForm.setAttribute("data-section-count", "1");
+    var cln = firsForm.cloneNode(true);
+    cln.setAttribute("data-section-count", sectionCount);
+    firsForm.parentNode.insertBefore(cln, cln.nextSibling);
+    sectionCount++;
+    return false;
+}
 
-function createSectionForm () {
-        var sectionFormElement = document.createElement("form"); //создаем форму в которой будут находится наш вопрос и поле с ответом
-        sectionFormElement.setAttribute('class', "section-style-form");//уставливаем класс для формы
-        document.querySelector("#profile-form").appendChild(sectionFormElement);//добавляем форму на страницу
-        document.querySelectorAll(".section-style-form")[sectionFormCount].setAttribute("data", "0");//добавляем форму на страницу
-        sectionFormCount++;// увеличиваем счетчик количества созданных форм
+var deleteButton = document.querySelectorAll(".delete-button");
 
-    }
-
+function deleteForm(event){
+    if (!event.target.classList.contains('delete-button')) return;
+alert("delete")
+    return false;
+}
 
 
 
