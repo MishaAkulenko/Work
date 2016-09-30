@@ -39,7 +39,7 @@ body {
     margin: 0px 5px;
 }
 .delete-button {
-    width: 60px;
+    width: 30px;
     height: 30px;
     border-radius: 3px;
     border: none;
@@ -54,8 +54,8 @@ body {
     background-color: #3b99cb;
 }
 
-.question-style {
-    font-size: 25px;
+.span-style {
+    font-size: 20px;
     position: relative;
     padding: 5px;
 }
@@ -69,6 +69,30 @@ body {
     border: none;
 }
 
+.question-style {
+    position: relative;
+    height: 26px;
+    width: 100px;
+    margin: 0;
+    border-radius: 5px;
+    border: none;
+}
+.values-style {
+    position: relative;
+    height: 26px;
+    width: 100px;
+    margin: 0;
+    border-radius: 5px;
+    border: none;
+}
+.parameter-style {
+    position: relative;
+    height: 26px;
+    width: 100px;
+    margin: 0;
+    border-radius: 5px;
+    border: none;
+}
 .select-style {
     position: relative;
     height: 26px;

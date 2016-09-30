@@ -1,0 +1,34 @@
+<html>
+  <head>
+   <meta charset="utf-8">
+    <title>Админ</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <link href = "https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  </head>
+  <body>
+    <div id = "profile-form">
+        <form class="section-style-form">
+           <button class="add-button">Add...</button>
+        </form>
+        <form class="section-style-form" >
+            <span class="span-style">Введите параметр</span>
+            <input type="text" class="parameter-style" data-parameter="1">
+            <span class="span-style">Выберите тип данных</span>
+            <select class="select-style" data-type="1">
+                <option>string</option>
+                <option>number</option>
+                <option>radio</option>
+                <option>checkbox</option>
+                <option>select</option>
+            </select>
+            <span class="span-style">Введите вопрос</span>
+            <input type="text" class="question-style" data-question="1">
+            <span class="span-style">Введите варианты через запятую</span>
+            <input type="text" class="values-style" data-values="1">
+            <button class="delete-button">X</button>
+        </form>
+    </div>
+      <script type = "text/javascript" src="Admin_script.js"></script>
+  </body>
+</html>

@@ -17,6 +17,7 @@ http.createServer(function (request, response) {
             break;
         }
         case 'POST': {
+            if (request.url === "/")
                 writeAnswers(request, response);
             break;
         }
@@ -24,6 +25,17 @@ http.createServer(function (request, response) {
 }).listen(8080);
 console.log("Server has started.");
 
+http.createServer(function (request, response){
+    response.setHeader("Access-Control-Allow-Origin", "*");
+    response.setHeader("Access-Control-Allow-Methods", "*");
+    response.setHeader('Access-Control-Allow-Headers', 'origin, content-type, accept');
+    if(request.method == 'POST') {
+        writeQuestion (request, response);
+    } else {
+        console.log("Запрос по другому адресу");   
+    }
+    response.end();
+}).listen(8000);
 
 function readProfile (request, response){
     fs.readFile("server/questions.json", 'utf8', function(err, data) {
@@ -31,28 +43,22 @@ function readProfile (request, response){
             console.log("Данные прочитаны");
             response.end(data);
             } else {
-                console.log("404")
+                console.log("Файл не найден")
             }
     });
 }
 
-function readFavicon (request, response) {
-    var img = fs.readFileSync('favicon.ico');
-    response.writeHead(200, {'Content-Type': 'image/ico' });
-    response.end(img, 'binary');
-    console.log("Фавикон считал ")
-}
 
 function writeAnswers(request, response) {
     var postData = "";
     request.addListener("data", function(postDataChunk) {
     postData += postDataChunk;
     });
-    
     request.addListener("end", function() {
+        console.log(request.method + request.url);
         fs.open("server/answer.json", "w", 0644, function(err, file_handle) {
         if (!err) {
-            fs.write(file_handle, postData, function(err, written) {
+            fs.write(file_handle, postData, null, function(err, written) {
                 if (!err) {
                     console.log("Записано")
                     fs.close(file_handle);
@@ -62,35 +68,34 @@ function writeAnswers(request, response) {
             });
         } else {
             console.log("Файл не открыт")
-        }
-        });
+            }
+        });  
     });
 }
 
-http.createServer(function (request, response){
-    console.log(request.method + request.url);
-    response.end();
-}).listen(8081);
+function writeQuestion (request, response) {
+    var postData = "";
+    request.addListener("data", function(postDataChunk) {
+    postData += postDataChunk;
+    });
+    request.addListener("end", function() {
+        console.log(request.method + request.url);
+        fs.open("server/questions.json", "w", 0644, function(err, file_handle) {
+        if (!err) {
+            fs.write(file_handle, postData, null, function(err, written) {
+                if (!err) {
+                    console.log("Записано")
+                    fs.close(file_handle);
+                } else {
+                    console.log("не записано")
+                }
+            });
+        } else {
+            console.log("Файл не открыт")
+            }
+        });  
+    });
+}
 
-/*function accept(request, response) {
-
-    var profile = {
-            name: {type: 'string', question: 'What is yor name?'},
-            age: {type: 'number', question: 'How old are you?'},
-            marital: {type: 'radio', values: ['married', 'widowed', 'single'], question: 'What is your marital status?'},
-            isStudent: {type: 'checkbox', question: 'Are you arbaiten?'},
-            income: {type: 'select', question: 'How much do you earn?', values: ['Nothing', '$50 - $100', '$100 - $500', '$500 - $1000', 'More then $1000']},//объект с данными пользователя который пришел с сервера                                      
-    };
-    
-    
-    
-
-    
-    
-    //var pathname = url.parse(request.url).pathname;
-    //console.log(pathname);
-    //console.log(request.method);
-    //console.log(request.url);
-    */
     
 
