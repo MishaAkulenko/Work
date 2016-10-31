@@ -1,0 +1,21 @@
+{
+  "name": "task8",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "MishaAkulenko <mishaakulenko@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/MishaAkulenko/Work",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.8"
+  }
+}

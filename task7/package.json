@@ -1,0 +1,22 @@
+{
+  "name": "task7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.1",
+    "gulp-live-server": "0.0.30",
+    "gulp-nodemon": "^2.2.1",
+    "jshint": "^2.9.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

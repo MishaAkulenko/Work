@@ -1,0 +1,31 @@
+<html>
+  <head>
+   <meta charset="utf-8">
+    <title>Админ</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  </head>
+  <body ng-app='profileMod'>
+    <div id="profile-form" ng-controller='ProfileController'>
+        <form class="section-style-form">
+           <button class="add-button" ng-click="addSection()">Add...</button>
+        </form>
+        <form class="section-style-form" ng-repeat='elem in sections track by $index' ng-model='addSection'>
+            <span class="span-style">Введите параметр</span>
+            <input type="text" class="parameter-style" ng-model='elem.dataParameter' ng-blur='createProfile(elem)'>
+            <span class="span-style">Выберите тип данных</span>
+            <select class="select-style" ng-model='elem.dataType' ng-blur='createProfile(elem)' >
+            <option ng-repeat="option in options track by $index">{{option.type}}</option>
+            </select>
+            <span class="span-style">Введите вопрос</span>
+            <input type="text" class="question-style" ng-model='elem.dataQuestion' ng-blur='createProfile(elem)'>
+            <span class="span-style" ng-if='hideValues(elem)'>Введите варианты через запятую</span>
+            <input type="text" class="values-style" ng-model='elem.dataValues'  ng-blur='createProfile(elem)' ng-if='hideValues(elem)'>
+            <button class="delete-button" ng-click='deleteSection(elem)'>X</button>
+        </form>
+    </div>
+      <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

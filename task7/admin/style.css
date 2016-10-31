@@ -1,0 +1,109 @@
+*{margin: 0px;}
+#profile-form {
+    margin: 100px auto;
+    background-color: white;
+    border-radius: 5px;
+    font-family: "BoomBoomRegular";
+    color: #42586a;
+    text-align: center; 
+    background-color: #40b4d0;
+    padding: 5px;
+}
+
+body {
+    background-color: #e5e6e6;
+}
+
+.add-button {
+    width: 60px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+}
+
+.up-button {
+    width: 60px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    float: left;
+    margin: 0px 5px 0px 5px;
+}
+
+.down-button {
+    width: 60px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    float: left;
+    margin: 0px 5px;
+}
+.delete-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    margin: 0px 5px;
+}
+
+.section-style-form {
+    padding: 5px 5px 5px 5px;
+    margin: 5px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: #3b99cb;
+}
+
+.span-style {
+    font-size: 20px;
+    position: relative;
+    padding: 5px;
+}
+
+.text-style {
+    position: relative;
+    height: 26px;
+    width: 100px;
+    margin: 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.question-style {
+    position: relative;
+    height: 26px;
+    width: 100px;
+    margin: 0;
+    border-radius: 5px;
+    border: none;
+}
+.values-style {
+    position: relative;
+    height: 26px;
+    width: 100px;
+    margin: 0;
+    border-radius: 5px;
+    border: none;
+}
+.parameter-style {
+    position: relative;
+    height: 26px;
+    width: 100px;
+    margin: 0;
+    border-radius: 5px;
+    border: none;
+}
+.select-style {
+    position: relative;
+    height: 26px;
+    margin: 0px;
+    border-radius: 5px;
+    border: none;
+}
+
+.list-style {
+    position: relative;
+    color: white;
+    margin: 0px;
+}
+
